@@ -23,7 +23,7 @@
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
 #define STRING_VERSION_CONFIG_H __DATE__ " " __TIME__ // build date and time
-#define STRING_CONFIG_H_AUTHOR "(none, default config)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(santi.castro)" // Who made the changes.
 
 // SERIAL_PORT selects which serial port should be used for communication with the host.
 // This allows the connection of wireless adapters (for instance) to non-default port pins.
@@ -230,7 +230,7 @@
 // all forms of bed control obey this (PID, bang-bang, bang-bang with hysteresis)
 // setting this to anything other than 255 enables a form of PWM to the bed just like HEATER_BED_DUTY_CYCLE_DIVIDER did,
 // so you shouldn't use it unless you are OK with PWM on your bed.  (see the comment on enabling PIDTEMPBED)
-#define MAX_BED_POWER 255 // limits duty cycle to bed; 255=full current
+#define MAX_BED_POWER 165 // limits duty cycle to bed; 255=full current
 
 #ifdef PIDTEMPBED
 //120v 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
@@ -494,7 +494,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 1509.1092*2.7, 760*1.1}  // default steps per unit for Ultimaker
 #define DEFAULT_MAX_FEEDRATE          {500, 500, 5/2.7, 25}    // (mm/sec)
-#define DEFAULT_MAX_ACCELERATION      {1000, 1000, 100, 1000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
+#define DEFAULT_MAX_ACCELERATION      {700, 700, 100, 1000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          3000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  3000   // X, Y, Z and E max acceleration in mm/s^2 for retracts
